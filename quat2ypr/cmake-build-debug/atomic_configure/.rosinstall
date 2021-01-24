@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/shaffei/helper/src/quat2ypr/cmake-build-debug/devel/setup.sh

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: quat2ypr
+Description: Description of quat2ypr
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

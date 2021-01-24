@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find rosbot_gazebo)/launch/maze_world.launch" />
+    <include file="$(find m2wr_description)/launch/spawn.launch" />
+    <include file="$(find m2wr_description)/launch/rviz.launch" />
+    <arg name="node_start_delay" default="4.0" />  
+    <node type="imu_filter_node" name="imu_filter" pkg="imu_filter_madgwick" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' ">
+    	<param name="use_mag" value="false"/> 
+    </node>
+    <node type="quat2ypr" name="quat2ypr_node" pkg="quat2ypr"/>
+</launch>
